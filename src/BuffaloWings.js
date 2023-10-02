@@ -1,12 +1,14 @@
 import React from "react";
-import {BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 
 function BuffaloWings() {
   return (
     <div>
       <p>Buffalo Wings!</p>
-      {/* <img src="https://www.utzsnacks.com/cdn/shop/products/0-83791-01005-2Zapps1.5ozVoodooKettleChipsBag_front.jpg?v=1680017457"></img> */}
+      <img
+        src="https://allthehealthythings.com/wp-content/uploads/2020/04/Crispy-Baked-Buffalo-Chicken-Wings-5-scaled.jpg"
+        alt='buffalo wings'></img>
       <p><Link to="/">Go Back</Link></p>
     </div>
   );

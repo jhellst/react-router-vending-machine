@@ -1,13 +1,18 @@
 import React from "react";
-import {BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import './VendingMachine.css';
 
 function VendingMachine() {
+  const location = useLocation();
+
   return (
     <div className="VendingMachine">
-      {/* {if ()} */}
-      <p>Go To: <Link to="/pocky">Pocky</Link></p>
-      <p>Go To: <Link to="/chips">Chips</Link></p>
-      <p>Go To: <Link to="/buffalo-wings">Buffalo Wings</Link></p>
+      <h1>Hello I am a vending machine what would you like to eat?</h1>
+      {location.pathname === '/' && <>
+        <p><Link to="/pocky">POCKY</Link></p>
+        <p><Link to="/chips">CHIPS</Link></p>
+        <p><Link to="/buffalo-wings">BUFFALO WINGS</Link></p>
+      </>}
     </div>
   );
 }
